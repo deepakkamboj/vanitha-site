@@ -348,7 +348,7 @@ export default function DonatePage() {
               <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
                 <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-full border-4 border-primary/20 lg:h-56 lg:w-56">
                   <Image
-                    src="/images/impact-story.jpg"
+                    src="/vanitha-site/images/impact-story.jpg"
                     alt="Impact story - Education beneficiary"
                     fill
                     className="object-cover"

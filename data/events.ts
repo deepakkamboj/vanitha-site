@@ -19,7 +19,7 @@ export const upcomingEvents: Event[] = [
     time: "6:00 PM - 10:00 PM",
     location: "Fremont Marriott Silicon Valley, Fremont, CA",
     description: "Join us for an elegant evening celebrating our community's achievements and raising funds for women's education programs. Enjoy dinner, live entertainment, and inspiring stories from beneficiaries.",
-    image: "/images/gala-event.jpg",
+    image: "/vanitha-site/images/gala-event.jpg",
     category: "fundraiser",
     featured: true,
     registrationLink: "#register",
@@ -31,7 +31,7 @@ export const upcomingEvents: Event[] = [
     time: "10:00 AM - 4:00 PM",
     location: "Central Park, Fremont, CA",
     description: "Free health screenings, wellness workshops, and resources for underserved community members. Services include blood pressure checks, diabetes screening, and health education.",
-    image: "/images/health-fair.jpg",
+    image: "/vanitha-site/images/health-fair.jpg",
     category: "health",
     featured: true,
   },
@@ -42,7 +42,7 @@ export const upcomingEvents: Event[] = [
     time: "2:00 PM - 5:00 PM",
     location: "Virtual Event",
     description: "Help us raise funds for scholarships that enable underprivileged girls to pursue higher education. Learn about our scholarship recipients and their inspiring journeys.",
-    image: "/images/scholarship.jpg",
+    image: "/vanitha-site/images/scholarship.jpg",
     category: "educational",
   },
   {
@@ -52,7 +52,7 @@ export const upcomingEvents: Event[] = [
     time: "9:00 AM - 3:00 PM",
     location: "Irvington Community Center, Fremont, CA",
     description: "A week-long educational camp for children focusing on STEM activities, arts, and cultural enrichment. Scholarships available for families in need.",
-    image: "/images/summer-camp.jpg",
+    image: "/vanitha-site/images/summer-camp.jpg",
     category: "educational",
   },
 ];
@@ -65,7 +65,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Bay Area, CA",
     description: "Raised over $20,000 to support vulnerable communities during the pandemic. Funds went to Second Harvest Food Bank, SF Marin Food Banks, Frontline Foods, No Kid Hungry, Shepherd's Gate, and Oakland Promise.",
-    image: "/images/events/covid-relief.jpg",
+    image: "/vanitha-site/images/events/covid-relief.jpg",
     category: "fundraiser",
   },
   {
@@ -75,7 +75,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Paradise, CA",
     description: "Emergency relief efforts for families affected by the devastating Paradise fire, providing essential supplies, temporary housing assistance, and emotional support.",
-    image: "/images/events/fire-relief.jpg",
+    image: "/vanitha-site/images/events/fire-relief.jpg",
     category: "community",
   },
   {
@@ -85,7 +85,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Multiple Locations",
     description: "A collaborative initiative to rescue and rehabilitate trafficking survivors, providing them with education, vocational training, and pathways to independence.",
-    image: "/images/events/community-donation.jpg",
+    image: "/vanitha-site/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -95,7 +95,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Bay Area, CA",
     description: "Supporting military families and veterans through care packages, community events, and connection to essential services.",
-    image: "/images/events/community-donation.jpg",
+    image: "/vanitha-site/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -105,7 +105,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Nepal",
     description: "Emergency humanitarian aid and long-term reconstruction support for communities devastated by the Nepal earthquake.",
-    image: "/images/events/nepal-relief.jpg",
+    image: "/vanitha-site/images/events/nepal-relief.jpg",
     category: "community",
   },
   {
@@ -115,7 +115,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "Regular visits and donations to local senior centers, providing companionship, cultural programs, and essential supplies.",
-    image: "/images/events/senior-center.jpg",
+    image: "/vanitha-site/images/events/senior-center.jpg",
     category: "community",
   },
   {
@@ -125,7 +125,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "Support for Abode Services, a local organization helping homeless individuals and families find housing and stability.",
-    image: "/images/events/community-donation.jpg",
+    image: "/vanitha-site/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -135,7 +135,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "One of our earliest community health initiatives, providing free health screenings and wellness education to underserved populations.",
-    image: "/images/events/health-fair.jpg",
+    image: "/vanitha-site/images/events/health-fair.jpg",
     category: "health",
   },
   {
@@ -145,7 +145,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "India",
     description: "Our founding initiative, establishing ongoing support for orphaned children including education, nutrition, and care.",
-    image: "/images/events/orphanage-support.jpg",
+    image: "/vanitha-site/images/events/orphanage-support.jpg",
     category: "educational",
   },
 ];

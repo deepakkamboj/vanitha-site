@@ -97,7 +97,7 @@ export default async function EventDetailPage({
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-          <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
+          <div className="absolute inset-0 bg-[url('/vanitha-site/images/pattern.svg')] opacity-5" />
           <div className="container mx-auto px-4 py-8">
             {/* Breadcrumb */}
             <nav className="mb-6 flex items-center gap-2 text-sm text-muted-foreground">

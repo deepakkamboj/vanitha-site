@@ -145,37 +145,37 @@ export const currentSponsors = [
   {
     name: "Community First Bank",
     tier: "Platinum",
-    logo: "/images/sponsors/bank.svg",
+    logo: "/vanitha-site/images/sponsors/bank.svg",
     website: "https://example.com",
   },
   {
     name: "TechForGood Inc",
     tier: "Gold",
-    logo: "/images/sponsors/tech.svg",
+    logo: "/vanitha-site/images/sponsors/tech.svg",
     website: "https://example.com",
   },
   {
     name: "Bay Area Medical Group",
     tier: "Gold",
-    logo: "/images/sponsors/medical.svg",
+    logo: "/vanitha-site/images/sponsors/medical.svg",
     website: "https://example.com",
   },
   {
     name: "Harmony Law Firm",
     tier: "Silver",
-    logo: "/images/sponsors/law.svg",
+    logo: "/vanitha-site/images/sponsors/law.svg",
     website: "https://example.com",
   },
   {
     name: "Fresh Foods Market",
     tier: "Silver",
-    logo: "/images/sponsors/food.svg",
+    logo: "/vanitha-site/images/sponsors/food.svg",
     website: "https://example.com",
   },
   {
     name: "Creative Design Studio",
     tier: "Bronze",
-    logo: "/images/sponsors/design.svg",
+    logo: "/vanitha-site/images/sponsors/design.svg",
     website: "https://example.com",
   },
 ];

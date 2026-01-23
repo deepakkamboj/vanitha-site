@@ -80,7 +80,7 @@ export function HeroSection() {
               {/* Main Image */}
               <div className="relative h-[600px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 shadow-2xl">
                 <Image
-                  src="/images/hero-community.jpg"
+                  src="/vanitha-site/images/hero-community.jpg"
                   alt="Vanitha community impact"
                   fill
                   className="object-cover"

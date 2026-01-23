@@ -113,7 +113,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-primary/10">
                     <Image
-                      src="/images/lady1.webp"
+                      src="/vanitha-site/images/lady1.webp"
                       alt="Vanitha community volunteers"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
@@ -139,7 +139,7 @@ export default function AboutPage() {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-accent/10">
                     <Image
-                      src="/images/lady2.webp"
+                      src="/vanitha-site/images/lady2.webp"
                       alt="Education programs"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
