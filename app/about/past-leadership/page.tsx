@@ -83,7 +83,7 @@ export default function PastLeadershipPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+                  <Card className="group h-full overflow-hidden border-border/50 bg-card transition-all duration-300 hover:shadow-lg hover:border-primary/30  pt-0">
                     <CardContent className="p-0">
                       <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
                         <Image

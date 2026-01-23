@@ -70,7 +70,7 @@ export function EventsSection() {
               <Card
                 key={event.id}
                 id={event.id}
-                className="group overflow-hidden transition-all duration-300 hover:shadow-lg scroll-mt-24"
+                className="group overflow-hidden transition-all duration-300 hover:shadow-lg scroll-mt-24  pt-0"
               >
                 <div className="aspect-video bg-muted">
                   <div className="flex h-full w-full items-center justify-center bg-primary/5">

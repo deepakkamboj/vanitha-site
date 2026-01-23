@@ -10,14 +10,15 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/images/logo.png"
-                alt="Vanitha - Indian American Association of Women"
-                width={180}
-                height={70}
-                className="h-16 w-auto"
-              />
+            <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+          <Image 
+            src="/images/logo.png" 
+            alt="Vanitha - Indian American Association of Women" 
+            width={180}
+            height={70}
+            className="h-14 w-auto object-contain"
+            priority
+          /><span className="text-xl font-bold uppercase text-primary">{siteConfig.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               {siteConfig.mission}

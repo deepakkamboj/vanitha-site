@@ -142,7 +142,7 @@ export default function DonatePage() {
                 {impactAreas.map((area) => (
                   <Card
                     key={area.title}
-                    className="group border-border/50 bg-card shadow-lg transition-all hover:shadow-xl hover:-translate-y-1"
+                    className="pt-0 group border-border/50 bg-card shadow-lg transition-all hover:shadow-xl hover:-translate-y-1"
                   >
                     <CardContent className="p-5">
                       <div className="flex items-start gap-4">

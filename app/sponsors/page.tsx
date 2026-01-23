@@ -39,8 +39,15 @@ export default function SponsorsPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-secondary/30 py-16 lg:py-24">
-          <div className="container mx-auto px-4">
+        <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 lg:py-24">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-[0.05]">
+            <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-primary" />
+            <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-accent" />
+            <div className="absolute left-1/2 -bottom-40 h-[300px] w-[300px] rounded-full bg-primary/50" />
+          </div>
+          
+          <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                 <Building2 className="h-8 w-8 text-primary" />

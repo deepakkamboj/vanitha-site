@@ -33,7 +33,7 @@ export function PastEventsSection() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {displayedEvents.map((event) => (
-            <Card key={event.id} className="group overflow-hidden">
+            <Card key={event.id} className="group overflow-hidden  pt-0">
               <div className="aspect-video bg-muted">
                 <div className="flex h-full w-full items-center justify-center bg-primary/5">
                   <Calendar className="h-12 w-12 text-primary/30" />

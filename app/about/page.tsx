@@ -1,7 +1,8 @@
 import React from "react"
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Heart, Shield, Users } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, BookOpen, Heart, Shield, Users, Target, Eye, Sparkles, TrendingUp } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -23,9 +24,9 @@ const iconMap: Record<string, React.ElementType> = {
 
 function TeamMemberCard({ member }: { member: typeof boardMembers[0] }) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden pt-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
       <div className="aspect-square bg-muted">
-        <div className="flex h-full w-full items-center justify-center bg-primary/5">
+        <div className="flex h-full w-full items-center justify-center bg-primary/5 transition-colors duration-300 hover:bg-primary/10">
           <span className="font-serif text-4xl font-bold text-primary/30">
             {member.name.split(" ").map((n) => n[0]).join("")}
           </span>
@@ -50,8 +51,15 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-secondary/30 py-16 lg:py-24">
-          <div className="container mx-auto px-4">
+        <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 lg:py-24">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-[0.05]">
+            <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-primary" />
+            <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-accent" />
+            <div className="absolute left-1/2 -bottom-40 h-[300px] w-[300px] rounded-full bg-primary/50" />
+          </div>
+          
+          <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-serif text-4xl font-bold text-foreground md:text-5xl">
                 <span className="text-balance">About Vanitha</span>
@@ -101,16 +109,41 @@ export default function AboutPage() {
                   </Link>
                 </Button>
               </div>
-              <div className="relative">
-                <div className="aspect-square rounded-3xl bg-primary/10 p-8">
-                  <div className="flex h-full flex-col items-center justify-center text-center">
-                    <Heart className="h-16 w-16 text-primary" />
-                    <p className="mt-4 font-serif text-2xl font-bold text-foreground">
-                      Since 1998
+              <div className="relative grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative aspect-square overflow-hidden rounded-2xl bg-primary/10">
+                    <Image
+                      src="/images/lady1.webp"
+                      alt="Vanitha community volunteers"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                  <div className="rounded-2xl bg-primary p-6 text-center">
+                    <p className="font-serif text-3xl font-bold text-primary-foreground">
+                      25+
                     </p>
-                    <p className="mt-2 text-muted-foreground">
-                      Serving communities with compassion
+                    <p className="mt-1 text-sm text-primary-foreground/80">
+                      Years of Service
                     </p>
+                  </div>
+                </div>
+                <div className="space-y-4 pt-8">
+                  <div className="rounded-2xl bg-accent/20 p-6 text-center">
+                    <p className="font-serif text-3xl font-bold text-foreground">
+                      10K+
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Lives Impacted
+                    </p>
+                  </div>
+                  <div className="relative aspect-square overflow-hidden rounded-2xl bg-accent/10">
+                    <Image
+                      src="/images/lady2.webp"
+                      alt="Education programs"
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                    />
                   </div>
                 </div>
               </div>
@@ -122,9 +155,14 @@ export default function AboutPage() {
         <section className="bg-secondary/30 py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="grid gap-8 md:grid-cols-2">
-              <Card className="bg-card">
+              <Card className="bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl">Our Mission</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                      <Target className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="font-serif text-2xl">Our Mission</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
@@ -132,11 +170,36 @@ export default function AboutPage() {
                     forums and charity, empowering women and children to achieve
                     their full potential and break cycles of poverty.
                   </p>
+                  <div className="mt-6 space-y-3">
+                    <div className="flex items-start gap-2">
+                      <Heart className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Compassionate support for vulnerable communities
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <BookOpen className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Education as a pathway to empowerment
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <TrendingUp className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Breaking cycles of poverty through opportunity
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="bg-card">
+              <Card className="bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl">Our Vision</CardTitle>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                      <Eye className="h-6 w-6 text-accent" />
+                    </div>
+                    <CardTitle className="font-serif text-2xl">Our Vision</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
@@ -144,6 +207,26 @@ export default function AboutPage() {
                     healthcare, and the support they need to thrive, regardless
                     of their circumstances.
                   </p>
+                  <div className="mt-6 space-y-3">
+                    <div className="flex items-start gap-2">
+                      <Sparkles className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Universal access to quality education
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Shield className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Healthcare and well-being for all
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Users className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">
+                        Equitable support regardless of circumstances
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>

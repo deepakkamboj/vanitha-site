@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Vanitha - Indian American Association Of Women',
     description: 'Help for the helpless and education for all.',
   },
-    generator: 'v0.app'
+    generator: 'Softleo LLC (www.softleo.com)'
 }
 
 export default function RootLayout({

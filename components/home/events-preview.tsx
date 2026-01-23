@@ -35,11 +35,11 @@ export function EventsPreview() {
           </Button>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 p-0">
           {featuredEvents.map((event) => (
             <Card
               key={event.id}
-              className="group overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className="group overflow-hidden transition-all duration-300 hover:shadow-lg p-0"
             >
               <div className="aspect-video bg-muted">
                 <div className="flex h-full w-full items-center justify-center bg-primary/5">

@@ -16,8 +16,8 @@ export function HeroSection() {
         <div className="absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full bg-accent" />
       </div>
 
-      <div className="container relative mx-auto px-4 py-16 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="container relative mx-auto px-4 py-8 lg:py-12">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export function HeroSection() {
           >
             <div className="relative">
               {/* Main Image */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 shadow-2xl">
+              <div className="relative h-[600px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 shadow-2xl">
                 <Image
                   src="/images/hero-community.jpg"
                   alt="Vanitha community impact"
@@ -100,7 +100,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="absolute -left-8 top-12 rounded-2xl bg-card p-4 shadow-xl border border-border/50"
+                className="absolute -left-4 top-3 rounded-2xl bg-card p-4 shadow-xl border border-border/50"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
@@ -117,7 +117,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="absolute -right-4 bottom-24 rounded-2xl bg-card p-4 shadow-xl border border-border/50"
+                className="absolute -right-4 bottom-32 rounded-2xl bg-card p-4 shadow-xl border border-border/50"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">

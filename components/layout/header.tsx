@@ -25,6 +25,7 @@ export function Header() {
             className="h-14 w-auto object-contain"
             priority
           />
+          <span className="text-xl font-bold uppercase text-primary">{siteConfig.name}</span>
         </Link>
 
         {/* Desktop Navigation */}
