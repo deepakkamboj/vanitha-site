@@ -59,13 +59,23 @@ export const upcomingEvents: Event[] = [
 
 export const pastEvents: Event[] = [
   {
+    id: "covid-relief-2020",
+    title: "COVID-19 Relief Fundraising",
+    date: "2020",
+    time: "",
+    location: "Bay Area, CA",
+    description: "Raised over $20,000 to support vulnerable communities during the pandemic. Funds went to Second Harvest Food Bank, SF Marin Food Banks, Frontline Foods, No Kid Hungry, Shepherd's Gate, and Oakland Promise.",
+    image: "/images/events/covid-relief.jpg",
+    category: "fundraiser",
+  },
+  {
     id: "paradise-fire-relief",
     title: "Paradise Fire Disaster Relief",
     date: "2019",
     time: "",
     location: "Paradise, CA",
     description: "Emergency relief efforts for families affected by the devastating Paradise fire, providing essential supplies, temporary housing assistance, and emotional support.",
-    image: "/images/fire-relief.jpg",
+    image: "/images/events/fire-relief.jpg",
     category: "community",
   },
   {
@@ -75,7 +85,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Multiple Locations",
     description: "A collaborative initiative to rescue and rehabilitate trafficking survivors, providing them with education, vocational training, and pathways to independence.",
-    image: "/images/take-her-back.jpg",
+    image: "/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -85,7 +95,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Bay Area, CA",
     description: "Supporting military families and veterans through care packages, community events, and connection to essential services.",
-    image: "/images/operation-care.jpg",
+    image: "/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -95,7 +105,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Nepal",
     description: "Emergency humanitarian aid and long-term reconstruction support for communities devastated by the Nepal earthquake.",
-    image: "/images/nepal-relief.jpg",
+    image: "/images/events/nepal-relief.jpg",
     category: "community",
   },
   {
@@ -105,7 +115,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "Regular visits and donations to local senior centers, providing companionship, cultural programs, and essential supplies.",
-    image: "/images/senior-center.jpg",
+    image: "/images/events/senior-center.jpg",
     category: "community",
   },
   {
@@ -115,7 +125,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "Support for Abode Services, a local organization helping homeless individuals and families find housing and stability.",
-    image: "/images/abode-donation.jpg",
+    image: "/images/events/community-donation.jpg",
     category: "community",
   },
   {
@@ -125,7 +135,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "Fremont, CA",
     description: "One of our earliest community health initiatives, providing free health screenings and wellness education to underserved populations.",
-    image: "/images/health-fair-2003.jpg",
+    image: "/images/events/health-fair.jpg",
     category: "health",
   },
   {
@@ -135,7 +145,7 @@ export const pastEvents: Event[] = [
     time: "",
     location: "India",
     description: "Our founding initiative, establishing ongoing support for orphaned children including education, nutrition, and care.",
-    image: "/images/abhaya-orphanage.jpg",
+    image: "/images/events/orphanage-support.jpg",
     category: "educational",
   },
 ];

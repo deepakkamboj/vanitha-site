@@ -199,9 +199,17 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <h3 className="mb-6 font-serif text-xl font-semibold text-foreground">
-              Board of Directors
-            </h3>
+            <div className="mb-6 flex items-center justify-between">
+              <h3 className="font-serif text-xl font-semibold text-foreground">
+                Board of Directors
+              </h3>
+              <Button asChild variant="outline" size="sm" className="bg-transparent">
+                <Link href="/about/past-leadership">
+                  View Past Leadership
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {boardMembers.map((member) => (
                 <TeamMemberCard key={member.id} member={member} />

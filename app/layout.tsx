@@ -1,18 +1,28 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { DM_Sans, Playfair_Display } from 'next/font/google'
+import { Poppins, Cormorant_Garamond, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const dmSans = DM_Sans({ 
+const poppins = Poppins({ 
   subsets: ["latin"],
-  variable: '--font-dm-sans'
+  weight: ["300", "400", "500", "600", "700"],
+  variable: '--font-poppins'
 });
 
-const playfair = Playfair_Display({ 
+const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"],
-  variable: '--font-playfair'
+  weight: ["400", "500", "600", "700"],
+  variable: '--font-cormorant'
 });
+
+const jetbrains = JetBrains_Mono({ 
+  subsets: ["latin"],
+  variable: '--font-jetbrains'
+});
+
+const dmSans = {}; // Declare dmSans variable here
+const playfair = {}; // Declare playfair variable here
 
 export const metadata: Metadata = {
   title: 'Vanitha - Indian American Association Of Women',
@@ -39,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${cormorant.variable} ${jetbrains.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

@@ -6,6 +6,80 @@ export interface TeamMember {
   image: string;
 }
 
+export interface PastPresident {
+  id: string;
+  name: string;
+  tenure: string;
+  image: string;
+  bio?: string;
+}
+
+export const pastPresidents: PastPresident[] = [
+  {
+    id: "padma-shandas",
+    name: "Padma Shandas",
+    tenure: "1995-2000, 2008-2009",
+    image: "/images/leadership/padma-shandas.jpg",
+    bio: "Founding President who established Vanitha's foundation and led the organization through its formative years.",
+  },
+  {
+    id: "geetha-kumar",
+    name: "Geetha Kumar",
+    tenure: "2001-2002",
+    image: "/images/leadership/geetha-kumar.jpg",
+    bio: "Expanded Vanitha's community outreach programs and strengthened partnerships with local organizations.",
+  },
+  {
+    id: "geeta-george",
+    name: "Geeta George",
+    tenure: "2003-2004, 2013-2015",
+    image: "/images/leadership/geeta-george.jpg",
+    bio: "Served multiple terms, leading major fundraising initiatives and expanding educational programs.",
+  },
+  {
+    id: "prema-thekkek",
+    name: "Prema Thekkek",
+    tenure: "2005-2006",
+    image: "/images/leadership/prema-thekkek.jpg",
+    bio: "Focused on health initiatives and launched the first community health fair programs.",
+  },
+  {
+    id: "usha-namboothiri",
+    name: "Usha Namboothiri",
+    tenure: "2007-2008",
+    image: "/images/leadership/usha-namboothiri.jpg",
+    bio: "Strengthened volunteer programs and increased community engagement initiatives.",
+  },
+  {
+    id: "vimala-tharsayi",
+    name: "Vimala Tharsayi",
+    tenure: "2010-2012",
+    image: "/images/leadership/vimala-tharsayi.jpg",
+    bio: "Led disaster relief efforts and expanded Vanitha's charitable giving programs.",
+  },
+  {
+    id: "mary-purayil",
+    name: "Mary Purayil",
+    tenure: "2015-2017",
+    image: "/images/leadership/mary-purayil.jpg",
+    bio: "Modernized operations and launched digital fundraising initiatives.",
+  },
+  {
+    id: "shirley-jacob",
+    name: "Shirley Jacob",
+    tenure: "2017-2019",
+    image: "/images/leadership/shirley-jacob.jpg",
+    bio: "Expanded youth programs and strengthened scholarship offerings.",
+  },
+  {
+    id: "annie-pathiparampil",
+    name: "Annie Pathiparampil",
+    tenure: "2019-2021",
+    image: "/images/leadership/annie-pathiparampil.jpg",
+    bio: "Led Vanitha through the COVID-19 pandemic with innovative relief programs.",
+  },
+];
+
 export const boardMembers: TeamMember[] = [
   {
     id: "geeta-george",

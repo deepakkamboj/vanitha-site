@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Heart, Mail, MapPin, Phone, Facebook, Instagram, Twitter } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone, Facebook, Instagram, Twitter } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -9,18 +10,14 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                <Heart className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold text-foreground">
-                  {siteConfig.name}
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  {siteConfig.tagline}
-                </span>
-              </div>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/logo.png"
+                alt="Vanitha - Indian American Association of Women"
+                width={180}
+                height={70}
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
               {siteConfig.mission}

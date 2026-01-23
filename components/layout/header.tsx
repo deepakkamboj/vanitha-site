@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,19 +15,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-            <Heart className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-xl font-bold text-foreground">
-              {siteConfig.name}
-            </span>
-            <span className="hidden text-xs text-muted-foreground sm:block">
-              {siteConfig.tagline}
-            </span>
-          </div>
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
+          <Image 
+            src="/images/logo.png" 
+            alt="Vanitha - Indian American Association of Women" 
+            width={160}
+            height={60}
+            className="h-14 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

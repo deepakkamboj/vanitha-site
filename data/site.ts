@@ -18,6 +18,7 @@ export const siteConfig = {
   navigation: [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Past Leadership", href: "/about/past-leadership" },
     { name: "Events", href: "/events" },
     { name: "Donate", href: "/donate" },
     { name: "Volunteer", href: "/volunteer" },
