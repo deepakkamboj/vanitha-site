@@ -5,6 +5,7 @@ import { ImpactSection } from "@/components/home/impact-section";
 import { ProgramsSection } from "@/components/home/programs-section";
 // import { EventsPreview } from "@/components/home/events-preview";
 import { ProjectsPreview } from "@/components/home/projects-preview";
+import { PhotoGallery } from "@/components/home/photo-gallery";
 import { CTASection } from "@/components/home/cta-section";
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
         <ImpactSection />
         <ProgramsSection />
         <ProjectsPreview />
+        <PhotoGallery />
         <CTASection />
       </main>
       <Footer />
