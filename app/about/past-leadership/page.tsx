@@ -128,34 +128,42 @@ export default function PastLeadershipPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mx-auto max-w-3xl text-center"
+              className="mx-auto max-w-4xl"
             >
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Heart className="h-8 w-8 text-primary" fill="currentColor" />
+              <div className="mb-8 text-center">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Heart className="h-8 w-8 text-primary" fill="currentColor" />
+                </div>
+                <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+                  Honoring Our Founders
+                </h2>
               </div>
-              
-              <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-                Honoring Our Founders
-              </h2>
-              
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Vanitha was founded in 1995 by a group of visionary Indian American women 
-                who recognized the need for community support, education, and charitable 
-                services in the Bay Area. Their founding vision of &ldquo;Help for the helpless 
-                and education for all&rdquo; continues to guide our mission today.
-              </p>
-              
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <Button asChild>
-                  <Link href="/about">
-                    Current Leadership
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="bg-transparent">
-                  <Link href="/volunteer">
-                    Join Our Mission
-                  </Link>
-                </Button>
+
+              <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src="/vanitha-site/images/founders.png"
+                    alt="Vanitha founders"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    Vanitha was founded in 1995 by a group of visionary Indian American women
+                    who recognized the need for community support, education, and charitable
+                    services in the Bay Area. Their founding vision of &ldquo;Help for the helpless
+                    and education for all&rdquo; continues to guide our mission today.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-4">
+                    <Button asChild>
+                      <Link href="/about">Current Leadership</Link>
+                    </Button>
+                    <Button asChild variant="outline" className="bg-transparent">
+                      <Link href="/volunteer">Join Our Mission</Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
