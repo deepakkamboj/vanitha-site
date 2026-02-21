@@ -82,32 +82,32 @@ export const pastPresidents: PastPresident[] = [
 
 export const boardMembers: TeamMember[] = [
   {
+    id: "manju-abraham",
+    name: "Manju Abraham",
+    role: "President",
+    bio: "Manju is an engineering executive who brings over three decades of experience leading and scaling global organizations. She makes a difference by turning ideas into structured action. She applies the same operational discipline, strategic clarity, and accountability to Vanitha's mission, expanding both global partnerships and hands-on local impact. She is committed to building an engaged community of volunteers and supporters, communicating our impact, fostering mentorship, and creating meaningful opportunities to serve with compassion. At the center of her leadership, driven by a lifelong passion to mentor and lift others up, is her belief that service is a shared responsibility and a profound source of joy, dignity, and human connection.",
+    image: "/vanitha-site/images/team/manju-abraham.jpg",
+  },
+  {
     id: "geeta-george",
     name: "Geeta George",
-    role: "President & Founder",
-    bio: "Geeta has been the driving force behind Vanitha since its founding in 1998. Her vision of empowering women and children through education and community support has touched thousands of lives.",
-    image: "/vanitha-site/images/team/president.jpg",
+    role: "Chair Person",
+    bio: "Geeta is an engineering architect and has been the driving force behind Vanitha since 2001, serving as President multiple times and doing the outreach into the community of supporters and sponsors and succession planning for sustained results. She is generous and tireless in her efforts to make a difference. Her passion and spirit are an inspiration for others. Her vision of empowering women and children through education and community support has touched thousands of lives.",
+    image: "/vanitha-site/images/team/geeta-george.jpg",
   },
   {
-    id: "priya-sharma",
-    name: "Priya Sharma",
-    role: "Vice President",
-    bio: "Priya brings 15 years of non-profit management experience and is passionate about creating sustainable programs that create lasting change in communities.",
-    image: "/vanitha-site/images/team/vice-president.jpg",
-  },
-  {
-    id: "lakshmi-patel",
-    name: "Lakshmi Patel",
+    id: "priya-sarojini",
+    name: "Priya Sarojini",
     role: "Secretary",
-    bio: "Lakshmi ensures smooth operations and communications across all Vanitha programs. Her organizational skills keep our initiatives running efficiently.",
-    image: "/vanitha-site/images/team/secretary.jpg",
+    bio: "Priya brings three decades of supply-chain management experience and is passionate about creating sustainable programs that create lasting change in communities. Her generous donations and efforts have touched many lives and institutions supporting women and children. She is passionate about mentoring and growing young people and enjoys sharing her knowledge and experience. Vanitha's activities provide great joy and meaning in her life.",
+    image: "/vanitha-site/images/team/priya-sarojini.jpg",
   },
   {
-    id: "anita-krishnan",
-    name: "Anita Krishnan",
-    role: "Treasurer",
-    bio: "Anita oversees all financial operations with meticulous attention to transparency. She ensures every donation is used effectively to maximize impact.",
-    image: "/vanitha-site/images/team/treasurer.jpg",
+    id: "usha-dawn",
+    name: "Usha Dawn",
+    role: "Board of Director",
+    bio: "Usha is a seasoned technology leader and community advocate serving as a Board Member on Vanitha's Charity Board. With close to three decades of experience in the tech industry, she currently works as a Technical Program Manager, driving AI-led innovation and enterprise programs. Beyond her professional achievements, Usha is a poet, blogger, and passionate patron of the arts, and an active SFJAZZ member who deeply supports music and cultural expression. Committed to philanthropy and women's empowerment, she brings strategic vision, compassion, and strong community engagement to Vanitha's mission of uplifting and supporting those in need.",
+    image: "/vanitha-site/images/team/usha-dawn.jpg",
   },
 ];
 

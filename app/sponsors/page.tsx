@@ -1,13 +1,13 @@
 import React from "react"
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Building2, Check, Star, Award, Heart } from "lucide-react";
+import { Building2, Check, Star, Award, Heart, RefreshCw, Quote } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { sponsorshipLevels, currentSponsors } from "@/data/donations";
+import { sponsorshipLevels, donationTiers } from "@/data/donations";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Sponsors - Vanitha",
@@ -29,11 +29,6 @@ const tierIcons: Record<string, React.ElementType> = {
 };
 
 export default function SponsorsPage() {
-  const platinumSponsors = currentSponsors.filter((s) => s.tier === "Platinum");
-  const goldSponsors = currentSponsors.filter((s) => s.tier === "Gold");
-  const silverSponsors = currentSponsors.filter((s) => s.tier === "Silver");
-  const bronzeSponsors = currentSponsors.filter((s) => s.tier === "Bronze");
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -136,114 +131,157 @@ export default function SponsorsPage() {
           </div>
         </section>
 
-        {/* Current Sponsors */}
+        {/* Donation Impact Levels */}
         <section className="bg-secondary/30 py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-                Our Sponsors
+                Every Dollar Makes a Difference
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-                We&apos;re grateful to these organizations for their generous support
-                of our mission.
+                See exactly what your donation achieves in our programs.
               </p>
             </div>
-
-            {platinumSponsors.length > 0 && (
-              <div className="mb-12">
-                <h3 className="mb-6 text-center font-serif text-xl font-semibold text-foreground">
-                  Platinum Sponsors
-                </h3>
-                <div className="flex flex-wrap justify-center gap-8">
-                  {platinumSponsors.map((sponsor) => (
-                    <a
-                      key={sponsor.name}
-                      href={sponsor.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex h-24 w-64 items-center justify-center rounded-lg bg-card p-4 transition-shadow hover:shadow-lg"
-                    >
-                      <div className="text-center">
-                        <Building2 className="mx-auto h-8 w-8 text-slate-600" />
-                        <p className="mt-2 font-medium text-foreground group-hover:text-primary">
-                          {sponsor.name}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {goldSponsors.length > 0 && (
-              <div className="mb-12">
-                <h3 className="mb-6 text-center font-serif text-xl font-semibold text-foreground">
-                  Gold Sponsors
-                </h3>
-                <div className="flex flex-wrap justify-center gap-6">
-                  {goldSponsors.map((sponsor) => (
-                    <a
-                      key={sponsor.name}
-                      href={sponsor.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex h-20 w-48 items-center justify-center rounded-lg bg-card p-4 transition-shadow hover:shadow-lg"
-                    >
-                      <div className="text-center">
-                        <Building2 className="mx-auto h-6 w-6 text-yellow-600" />
-                        <p className="mt-1 text-sm font-medium text-foreground group-hover:text-primary">
-                          {sponsor.name}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {silverSponsors.length > 0 && (
-              <div className="mb-12">
-                <h3 className="mb-6 text-center font-serif text-xl font-semibold text-foreground">
-                  Silver Sponsors
-                </h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {silverSponsors.map((sponsor) => (
-                    <a
-                      key={sponsor.name}
-                      href={sponsor.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex h-16 w-40 items-center justify-center rounded-lg bg-card p-3 transition-shadow hover:shadow-lg"
-                    >
-                      <p className="text-sm font-medium text-foreground group-hover:text-primary">
-                        {sponsor.name}
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {bronzeSponsors.length > 0 && (
-              <div>
-                <h3 className="mb-6 text-center font-serif text-xl font-semibold text-foreground">
-                  Bronze Sponsors
-                </h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {bronzeSponsors.map((sponsor) => (
-                    <Badge
-                      key={sponsor.name}
-                      variant="secondary"
-                      className="px-4 py-2 text-sm"
-                    >
-                      {sponsor.name}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            )}
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {donationTiers.filter((t) => [50, 100, 250, 500].includes(t.amount)).map((tier) => (
+                <Card key={tier.name} className={`relative ${tier.featured ? "border-primary ring-2 ring-primary/20" : ""}`}>
+                  {tier.featured && (
+                    <div className="absolute right-0 top-0 bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader className="text-center">
+                    <div className="text-3xl font-bold text-foreground">${tier.amount}</div>
+                    <CardTitle className="font-serif text-lg">{tier.name}</CardTitle>
+                    <CardDescription>{tier.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {tier.impact.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                          <span className="text-sm text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild className="mt-6 w-full bg-primary hover:bg-primary/90">
+                      <Link href="/donate">Donate ${tier.amount}</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
+
+        {/* Monthly Giving & Corporate Matching */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+                Multiply Your Impact
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                Recurring gifts and employer matching help us plan for the future
+                and maximize every dollar.
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2">
+              <Card className="border-primary/20 bg-primary/5">
+                <CardHeader>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                    <RefreshCw className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="font-serif text-2xl">Give Monthly</CardTitle>
+                  <CardDescription>
+                    A small monthly commitment creates lasting, predictable impact.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">$10/month provides school supplies year-round</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">$25/month sponsors one child&apos;s tutoring</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">Cancel or change anytime</span>
+                  </div>
+                  <Button asChild className="mt-4 w-full bg-primary hover:bg-primary/90">
+                    <Link href="/donate">Set Up Monthly Giving</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="border-accent/20 bg-accent/5">
+                <CardHeader>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
+                    <Building2 className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <CardTitle className="font-serif text-2xl">Corporate Matching</CardTitle>
+                  <CardDescription>
+                    Many employers match employee donations — doubling your impact at no extra cost.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">Check with your HR or use Benevity / YourCause portals</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">Vanitha is a registered 501(c)(3) — TAX ID: {siteConfig.taxId}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">We&apos;ll provide any documentation your employer needs</span>
+                  </div>
+                  <Button asChild variant="outline" className="mt-4 w-full bg-transparent">
+                    <Link href="/contact?subject=matching">Contact Us to Match</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Stories of Impact — WIP */}
+        <section className="bg-secondary/30 py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+                Stories of Impact
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                Real stories from the people whose lives have been changed by
+                your generosity.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="border-dashed opacity-60">
+                  <CardHeader>
+                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+                      <Quote className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm italic text-muted-foreground">
+                      Personal story coming soon&hellip;
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <p className="mt-8 text-center text-sm text-muted-foreground">
+              Testimonials in progress — check back soon.
+            </p>
+          </div>
+        </section>
+
 
         {/* Why Sponsor */}
         <section className="py-16 lg:py-24">

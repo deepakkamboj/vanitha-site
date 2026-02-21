@@ -62,8 +62,7 @@ export default function ContactPage() {
                 Contact Us
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Have questions about our programs, want to volunteer, or interested
-                in partnering with us? We&apos;d love to hear from you.
+                				Have questions about our programs, want to volunteer, or interested in partnering with us? We'd love to hear from you.					
               </p>
             </div>
           </div>

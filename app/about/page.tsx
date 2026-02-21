@@ -8,11 +8,12 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig, coreValues } from "@/data/site";
-import { boardMembers, advisoryBoard } from "@/data/team";
+import { boardMembers } from "@/data/team";
+import aboutData from "@/data/about.json";
 
 export const metadata: Metadata = {
   title: "About Us - Vanitha",
-  description: "Learn about Vanitha, an Indian American Association of Women dedicated to serving communities in need through education and charity since 1998.",
+  description: "Learn about Vanitha, an Indian American Association of Women dedicated to serving communities in need through education and charity since 1995.",
 };
 
 const iconMap: Record<string, React.ElementType> = {
@@ -50,21 +51,20 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
+
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 lg:py-24">
-          {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.05]">
             <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-primary" />
             <div className="absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-accent" />
             <div className="absolute left-1/2 -bottom-40 h-[300px] w-[300px] rounded-full bg-primary/50" />
           </div>
-          
           <div className="container relative mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-serif text-4xl font-bold text-foreground md:text-5xl">
-                <span className="text-balance">About Vanitha</span>
+                About Vanitha
               </h1>
-              <p className="mt-4 text-xl text-primary font-medium">
+              <p className="mt-4 text-xl font-medium text-primary">
                 {siteConfig.tagline}
               </p>
               <p className="mt-6 text-lg text-muted-foreground">
@@ -74,34 +74,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story */}
+        {/* Our Story — intro + images */}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
                 <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-                  Our Story
+                  {aboutData.story.title}
                 </h2>
-                <div className="mt-6 space-y-4 text-muted-foreground">
-                  <p>
-                    Founded in 1998, Vanitha began with a simple yet powerful vision:
-                    to provide help for the helpless and education for all. What started
-                    as a small group of dedicated Indian American women in the Bay Area
-                    has grown into a thriving organization that has touched thousands of lives.
-                  </p>
-                  <p>
-                    Our journey began with support for the Abhaya Orphanage in India,
-                    providing education, nutrition, and care for orphaned children.
-                    Since then, we&apos;ve expanded our reach to include health fairs,
-                    disaster relief, senior center support, and numerous educational
-                    programs.
-                  </p>
-                  <p>
-                    As a 501(c)(3) non-profit organization (Tax ID: {siteConfig.taxId}),
-                    we operate entirely on volunteer power. This means 100% of your
-                    donations go directly to our programs and the communities we serve.
-                  </p>
-                </div>
+                <p className="mt-6 text-muted-foreground">
+                  {aboutData.story.intro}
+                </p>
                 <Button asChild className="mt-8 bg-primary hover:bg-primary/90">
                   <Link href="/donate">
                     Support Our Mission
@@ -151,8 +134,36 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Our Story — full narrative */}
+        <section className="border-t border-border/50 bg-muted/30 py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl">
+              {/* Tagline pull-quote */}
+              <blockquote className="mb-10 border-l-4 border-primary pl-6">
+                <p className="font-serif text-xl font-semibold text-primary md:text-2xl">
+                  {aboutData.story.tagline}
+                </p>
+              </blockquote>
+
+              {/* Narrative paragraphs */}
+              <div className="space-y-5 text-muted-foreground">
+                {aboutData.story.narrative.map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+
+              {/* Closing paragraphs */}
+              <div className="mt-10 space-y-5 rounded-2xl bg-primary/5 p-6 text-muted-foreground">
+                {aboutData.story.closing.map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mission & Vision */}
-        <section className="bg-secondary/30 py-16 lg:py-24">
+        <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="grid gap-8 md:grid-cols-2">
               <Card className="bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -161,37 +172,28 @@ export default function AboutPage() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <Target className="h-6 w-6 text-primary" />
                     </div>
-                    <CardTitle className="font-serif text-2xl">Our Mission</CardTitle>
+                    <CardTitle className="font-serif text-2xl">{aboutData.mission.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    To provide services to communities in need through educational
-                    forums and charity, empowering women and children to achieve
-                    their full potential and break cycles of poverty.
+                    {aboutData.mission.description}
                   </p>
                   <div className="mt-6 space-y-3">
-                    <div className="flex items-start gap-2">
-                      <Heart className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Compassionate support for vulnerable communities
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <BookOpen className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Education as a pathway to empowerment
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <TrendingUp className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Breaking cycles of poverty through opportunity
-                      </p>
-                    </div>
+                    {[
+                      { icon: Heart, text: aboutData.mission.pillars[0] },
+                      { icon: BookOpen, text: aboutData.mission.pillars[1] },
+                      { icon: TrendingUp, text: aboutData.mission.pillars[2] },
+                    ].map(({ icon: Icon, text }) => (
+                      <div key={text} className="flex items-start gap-2">
+                        <Icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                        <p className="text-sm text-muted-foreground">{text}</p>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
+
               <Card className="bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>
                   <div className="flex items-center gap-3">
@@ -209,22 +211,16 @@ export default function AboutPage() {
                   </p>
                   <div className="mt-6 space-y-3">
                     <div className="flex items-start gap-2">
-                      <Sparkles className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Universal access to quality education
-                      </p>
+                      <Sparkles className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <p className="text-sm text-muted-foreground">Universal access to quality education</p>
                     </div>
                     <div className="flex items-start gap-2">
-                      <Shield className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Healthcare and well-being for all
-                      </p>
+                      <Shield className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <p className="text-sm text-muted-foreground">Healthcare and well-being for all</p>
                     </div>
                     <div className="flex items-start gap-2">
-                      <Users className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <p className="text-sm text-muted-foreground">
-                        Equitable support regardless of circumstances
-                      </p>
+                      <Users className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <p className="text-sm text-muted-foreground">Equitable support regardless of circumstances</p>
                     </div>
                   </div>
                 </CardContent>
@@ -234,7 +230,7 @@ export default function AboutPage() {
         </section>
 
         {/* Core Values */}
-        <section id="values" className="py-16 lg:py-24">
+        <section id="values" className="bg-secondary/30 py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
@@ -244,7 +240,6 @@ export default function AboutPage() {
                 These principles guide everything we do at Vanitha.
               </p>
             </div>
-
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {coreValues.map((value) => {
                 const Icon = iconMap[value.icon];
@@ -254,14 +249,10 @@ export default function AboutPage() {
                       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <CardTitle className="font-serif text-lg">
-                        {value.title}
-                      </CardTitle>
+                      <CardTitle className="font-serif text-lg">{value.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground">
-                        {value.description}
-                      </p>
+                      <p className="text-sm text-muted-foreground">{value.description}</p>
                     </CardContent>
                   </Card>
                 );
@@ -270,8 +261,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership Team */}
-        <section className="bg-secondary/30 py-16 lg:py-24">
+        {/* Leadership */}
+        <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
@@ -281,7 +272,6 @@ export default function AboutPage() {
                 Meet the dedicated volunteers who guide Vanitha&apos;s mission.
               </p>
             </div>
-
             <div className="mb-6 flex items-center justify-between">
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Board of Directors
@@ -298,20 +288,11 @@ export default function AboutPage() {
                 <TeamMemberCard key={member.id} member={member} />
               ))}
             </div>
-
-            <h3 className="mb-6 mt-12 font-serif text-xl font-semibold text-foreground">
-              Advisory Board
-            </h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {advisoryBoard.map((member) => (
-                <TeamMemberCard key={member.id} member={member} />
-              ))}
-            </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 lg:py-24">
+        <section className="bg-secondary/30 py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="rounded-3xl bg-primary p-8 text-center lg:p-12">
               <h2 className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl">
@@ -332,7 +313,7 @@ export default function AboutPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+                  className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
                 >
                   <Link href="/volunteer">Volunteer With Us</Link>
                 </Button>
@@ -340,6 +321,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

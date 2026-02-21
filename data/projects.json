@@ -1,0 +1,250 @@
+{
+  "hero": {
+    "title": "Vanitha Foundation",
+    "subtitle": "Areas of Impact and Ongoing Activities",
+    "description": "Vanitha is a volunteer-run nonprofit focused on direct service, dignity-centered aid, and education for underserved communities. Our work spans local communities in California and long-term partnerships in India. We prioritize hands-on action, trusted grassroots partners, and careful stewardship of funds."
+  },
+  "categories": [
+    {
+      "id": "local",
+      "romanNumeral": "I",
+      "title": "Local Community Support and Relief",
+      "punchline": "Showing up where we live — with supplies, skills, and solidarity.",
+      "location": "California",
+      "areas": [
+        {
+          "number": 1,
+          "icon": "package",
+          "title": "Essential Needs Collection and Distribution",
+          "description": "Vanitha organizes regular community drives to gather and distribute critical supplies for vulnerable populations.",
+          "sections": [
+            {
+              "label": "Activities include",
+              "items": [
+                "Collecting clothing, jackets, shoes, socks, blankets, toiletries, and sanitary napkins",
+                "Procuring and packing non-perishable food items",
+                "Coordinating food packing and distribution efforts"
+              ]
+            },
+            {
+              "label": "Communities served",
+              "items": [
+                "Unhoused individuals and families in the Bay Area",
+                "Migrant farm workers in Salinas and Watsonville, many of whom live in overcrowded housing while sending earnings to families in Mexico and South America"
+              ]
+            }
+          ],
+          "note": "Distribution is done directly or in collaboration with local partners to ensure dignity, safety, and immediate usefulness."
+        },
+        {
+          "number": 2,
+          "icon": "heart",
+          "title": "Support for Vulnerable Local Populations",
+          "description": "Vanitha contributes time, resources, and funding to organizations aligned with our mission of helping the underserved, the helpless, and those facing crisis.",
+          "sections": [
+            {
+              "label": "Focus areas include",
+              "items": [
+                "Support for veterans",
+                "Assistance to women and families in shelters",
+                "Community counseling and support for cancer patients and their families",
+                "Emergency assistance during local disasters"
+              ]
+            },
+            {
+              "label": "Aligned partner organizations include",
+              "items": [
+                "CityTeam Ministries",
+                "Shepherd's Gate",
+                "SAVE"
+              ]
+            }
+          ],
+          "note": "During the COVID period, Vanitha also supported underserved school communities in Oakland by collecting laptops from corporate donors and setting up computer labs in under-resourced schools."
+        },
+        {
+          "number": 3,
+          "icon": "users",
+          "title": "Community Building and Volunteer Engagement",
+          "description": "Vanitha actively brings together individuals who want to serve, contribute, and build community through action.",
+          "sections": [
+            {
+              "label": "This includes",
+              "items": [
+                "Organizing donation drives and volunteer days",
+                "Coordinating packing, sorting, and distribution events",
+                "Creating opportunities for families and professionals to serve together",
+                "Mentoring women locally and providing guidance on financial independence and self-sufficiency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education-us",
+      "romanNumeral": "II",
+      "title": "Education, Equity, and Opportunity",
+      "punchline": "Closing the gap between potential and access — one student at a time.",
+      "location": "United States",
+      "areas": [
+        {
+          "number": 4,
+          "icon": "monitor",
+          "title": "Educational Access and Digital Inclusion",
+          "description": "Vanitha supports educational equity by addressing access gaps in technology and infrastructure.",
+          "sections": [
+            {
+              "label": "Examples include",
+              "items": [
+                "Laptop donations to underprivileged students pursuing education, including devices donated by Ajit Shivadasan",
+                "Support for school infrastructure needs identified by teachers and principals",
+                "Collaboration with organizations building housing and basic infrastructure for underserved communities"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "india",
+      "romanNumeral": "III",
+      "title": "Long-Term Partnerships and Impact",
+      "punchline": "Trusted relationships, transparent giving, and lasting change across India.",
+      "location": "India",
+      "intro": "Vanitha partners with carefully vetted grassroots organizations in India. These are long-term relationships built on trust, transparency, and on-the-ground accountability.",
+      "areas": [
+        {
+          "number": 5,
+          "icon": "baby",
+          "title": "Orphan Care, Youth Transition, and Vocational Training",
+          "description": "Vanitha supports organizations focused on children and young adults who lack family support.",
+          "sections": [
+            {
+              "label": "Key partners include",
+              "items": [
+                "Future for Every Child (AFEC) – supporting care leavers and orphans nearing adulthood through mentoring, vocational training, and job readiness"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "icon": "accessibility",
+          "title": "Support for Differently-Abled Children",
+          "description": "Vanitha has raised funds and supported institutions serving children with physical and developmental challenges.",
+          "sections": [
+            {
+              "label": "Examples include",
+              "items": [
+                "Support for schools run by Gopinath Muthukad, serving differently-abled children",
+                "Contributions to Budhi School, a residential school for differently-abled students"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "icon": "graduation-cap",
+          "title": "Education Sponsorship and School Adoption",
+          "description": "Vanitha supports individual students and schools where financial hardship prevents access to education.",
+          "sections": [
+            {
+              "label": "Support includes",
+              "items": [
+                "Tuition assistance",
+                "Funding for housing, supplies, and basic needs",
+                "Support for children from single-parent families, families with disabled parents, or those facing extreme economic hardship"
+              ]
+            },
+            {
+              "label": "School adoption initiatives include",
+              "items": [
+                "Construction of toilets and sanitation facilities in girls' schools",
+                "Addressing critical gaps that directly affect attendance and safety",
+                "Funding infrastructure improvements based on direct feedback from teachers and principals"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "icon": "stethoscope",
+          "title": "Healthcare, Palliative Care, and Medical Support",
+          "description": "Vanitha supports children and families facing serious illness, with a strong emphasis on dignity and compassionate care.",
+          "sections": [
+            {
+              "label": "Areas of support include",
+              "items": [
+                "Medical assistance for children with Type 1 and Type 2 diabetes",
+                "Support for children with terminal illnesses",
+                "Funding for cancer care and family support"
+              ]
+            },
+            {
+              "label": "Aligned healthcare partners include",
+              "items": [
+                "Solace",
+                "Palium India, founded by Dr. Rajagopal",
+                "SoCare and related organizations supporting pediatric cancer care"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "icon": "home",
+          "title": "Housing and Basic Infrastructure",
+          "description": "Vanitha has supported the construction of homes for underprivileged families and children who previously lacked safe shelter. These efforts are carried out through select partner organizations with strict financial accountability and local oversight.",
+          "sections": []
+        }
+      ]
+    }
+  ],
+  "principles": {
+    "title": "Operating Principles",
+    "romanNumeral": "IV",
+    "intro": "Across all activities, Vanitha operates with the following principles:",
+    "items": [
+      "Direct impact over overhead",
+      "Trusted, feet-on-the-ground partners",
+      "Careful selection of aligned organizations",
+      "Transparent use of funds",
+      "Volunteer-led execution with deep personal involvement"
+    ]
+  },
+  "updates": [
+    {
+      "date": "January 2026",
+      "title": "Serving the Homeless Community in San Jose",
+      "partner": "Hands That Care, Bay Area",
+      "intro": "Vanitha served the homeless community along the embankments of San Jose in partnership with Hands That Care, Bay Area. Our volunteers came together early in the morning to pack and distribute food, clothing, and essential supplies directly to where people live — under flyovers, in parks, along embankments that are often overlooked, but very much inhabited by those who have no place to rest their head.",
+      "provided": [
+        "Meals and non-perishable food",
+        "Clothing, jackets, shoes, socks, and undergarments",
+        "Toiletries and hygiene essentials",
+        "Direct support for urgent needs through cash donations"
+      ],
+      "highlight": "In one case, a generous donation helped repair a stalled car so a woman fleeing domestic violence could safely continue her journey to reunite with her family.",
+      "reflection": "What stayed with us most was the tone of the day. The people we served looked out for one another instinctively — redirecting items to those who needed them more, calling others over so no one missed out, noticing the dogs and cats that mattered deeply to their owners and making sure they were fed too. Our volunteers felt a quiet steadiness replace urgency. Gratitude flowed both ways. Several shared afterward that the experience recalibrated them — reminding us of our privileges and motivating us to do even more.",
+      "gratitude": "None of this happens without donors. Every bag packed, every meal served, every essential item handed over was made possible by people who chose to give — some donated money, others donated clothing, shoes, toiletries, socks, and supplies, many gave quietly and anonymously. This work matters because it is concrete and needed. It meets people where they are. And it turns generosity into immediate action."
+    },
+    {
+      "date": "March 2025",
+      "title": "Empowering Dreams Through Education",
+      "subtitle": "Supporting an Aspiring Student in India",
+      "intro": "Vanitha Charity Organization remains committed to its mission of creating equal educational opportunities for children from underprivileged backgrounds. We recently extended financial support to a deserving student in India pursuing a career in finance and accounting — covering the complete cost of enrollment and preparation for the CA (Chartered Accountancy) Foundation Course.",
+      "expenses": [
+        { "label": "Course Registration Fee", "amount": "₹12,660" },
+        { "label": "CA Foundation Course Fee", "amount": "₹32,000" },
+        { "label": "ICAL Registration Fee", "amount": "₹9,300" },
+        { "label": "Uniform", "amount": "₹3,500" },
+        { "label": "Study Material", "amount": "₹3,000" },
+        { "label": "Subtotal", "amount": "₹60,460" },
+        { "label": "GST @ 18%", "amount": "₹10,882.80" },
+        { "label": "Total Amount Sponsored", "amount": "₹71,342.80" }
+      ],
+      "closing": "This support is not just a financial contribution — it is an investment in a young life, a commitment to nurturing talent, and a promise that no dream is too big when backed by a caring community. We are proud to have been part of this student's journey and will continue to champion education as a path to empowerment and transformation."
+    }
+  ]
+}

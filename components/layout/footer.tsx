@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
           <Image 
-            src="/vanitha-site/images/logo.png" 
+            src="/vanitha-site/images/logo-old.webp" 
             alt="Vanitha - Indian American Association of Women" 
             width={180}
             height={70}
@@ -36,7 +36,7 @@ export function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {siteConfig.navigation.map((item) => (
+              {siteConfig.footerNavigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

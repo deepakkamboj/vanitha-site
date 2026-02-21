@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Vanitha",
   tagline: "Indian American Association Of Women",
   mission: "Help for the helpless and education for all",
-  description: "Vanitha is a volunteer-based organization. Our mission is to provide services to communities in need, through educational forums and charity.",
+  description: "Vanitha is a volunteer-based organization. Our mission is to provide services to communities in need, through educational forums and charity. Our mission is \u201cHelp for the Helpless and Education for All\u201d",
   taxId: "94-3223623",
   nonprofit: "501(c)(3) Non-profit Organization",
   contact: {
@@ -17,12 +17,32 @@ export const siteConfig = {
   },
   navigation: [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    {
+      name: "Get Involved",
+      href: "/volunteer",
+      children: [
+        { name: "Youth", href: "/volunteer" },
+        { name: "Women", href: "/about" },
+        { name: "Community Events", href: "/events" },
+        { name: "Organized Programs", href: "/projects" },
+      ],
+    },
+    { name: "Donate", href: "/donate" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
+  ],
+  footerNavigation: [
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Past Leadership", href: "/about/past-leadership" },
     { name: "Events", href: "/events" },
+    { name: "Projects", href: "/projects" },
     { name: "Donate", href: "/donate" },
     { name: "Volunteer", href: "/volunteer" },
     { name: "Sponsors", href: "/sponsors" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ],
 };
