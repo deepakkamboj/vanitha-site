@@ -18,8 +18,12 @@ export function Footer() {
             height={70}
             className="h-14 w-auto object-contain"
             priority
-          /><span className="text-xl font-bold uppercase text-primary">{siteConfig.name}</span>
+          />
             </Link>
+            <div>
+              <span className="text-xl font-bold uppercase text-primary">{siteConfig.name}</span>
+              <p className="text-sm font-medium text-primary">Indian American Association Of Women</p>
+            </div>
             <p className="text-sm text-muted-foreground">
               {siteConfig.mission}
             </p>
