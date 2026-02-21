@@ -137,27 +137,39 @@ export default function AboutPage() {
         {/* Our Story — full narrative */}
         <section className="border-t border-border/50 bg-muted/30 py-16 lg:py-24">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl">
-              {/* Tagline pull-quote */}
-              <blockquote className="mb-10 border-l-4 border-primary pl-6">
-                <p className="font-serif text-xl font-semibold text-primary md:text-2xl">
-                  {aboutData.story.tagline}
-                </p>
-              </blockquote>
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
 
-              {/* Narrative paragraphs */}
-              <div className="space-y-5 text-muted-foreground">
-                {aboutData.story.narrative.map((para, i) => (
-                  <p key={i}>{para}</p>
-                ))}
+              {/* Left — tagline + narrative */}
+              <div>
+                <blockquote className="mb-10 border-l-4 border-primary pl-6">
+                  <p className="font-serif text-xl font-semibold text-primary md:text-2xl">
+                    {aboutData.story.tagline}
+                  </p>
+                </blockquote>
+                <div className="space-y-5 text-muted-foreground">
+                  {aboutData.story.narrative.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
               </div>
 
-              {/* Closing paragraphs */}
-              <div className="mt-10 space-y-5 rounded-2xl bg-primary/5 p-6 text-muted-foreground">
-                {aboutData.story.closing.map((para, i) => (
-                  <p key={i}>{para}</p>
-                ))}
+              {/* Right — photo + 501(c)(3) closing */}
+              <div className="space-y-6">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/vanitha-site/images/impact-story.jpg"
+                    alt="Vanitha community impact"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="space-y-5 rounded-2xl bg-primary/5 p-6 text-muted-foreground">
+                  {aboutData.story.closing.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
               </div>
+
             </div>
           </div>
         </section>
