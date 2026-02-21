@@ -29,7 +29,10 @@ export function HeroSection() {
                 <Heart className="h-4 w-4" fill="currentColor" />
                 {siteConfig.nonprofit}
               </div>
-              <p className="text-base font-semibold text-primary">Indian American Association Of Women</p>
+              <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent-foreground">
+                <Users className="h-4 w-4 text-accent" />
+                Indian American Association Of Women
+              </div>
             </div>
 
             <h1 className="font-serif text-4xl font-bold leading-[1.1] text-foreground md:text-5xl lg:text-6xl">
