@@ -74,7 +74,7 @@ export default function PastLeadershipPage() {
               </p>
             </motion.div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {pastPresidents.map((president, index) => (
                 <motion.div
                   key={president.id}
