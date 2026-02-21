@@ -86,7 +86,7 @@ export const boardMembers: TeamMember[] = [
     name: "Manju Abraham",
     role: "President",
     bio: "Manju is an engineering executive who brings over three decades of experience leading and scaling global organizations. She makes a difference by turning ideas into structured action. She applies the same operational discipline, strategic clarity, and accountability to Vanitha's mission, expanding both global partnerships and hands-on local impact. She is committed to building an engaged community of volunteers and supporters, communicating our impact, fostering mentorship, and creating meaningful opportunities to serve with compassion. At the center of her leadership, driven by a lifelong passion to mentor and lift others up, is her belief that service is a shared responsibility and a profound source of joy, dignity, and human connection.",
-    image: "/vanitha-site/images/team/manju-abraham.webp",
+    image: "/vanitha-site/images/leaders/manju-abraham.jpg",
   },
   {
     id: "geeta-george",
