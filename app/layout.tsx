@@ -1,7 +1,7 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Poppins, Cormorant_Garamond, JetBrains_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+
 import './globals.css'
 
 const poppins = Poppins({ 
@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${cormorant.variable} ${jetbrains.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
+     
       </body>
     </html>
   )
