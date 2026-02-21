@@ -93,7 +93,7 @@ export const boardMembers: TeamMember[] = [
     name: "Geeta George",
     role: "Chair Person",
     bio: "Geeta is an engineering architect and has been the driving force behind Vanitha since 2001, serving as President multiple times and doing the outreach into the community of supporters and sponsors and succession planning for sustained results. She is generous and tireless in her efforts to make a difference. Her passion and spirit are an inspiration for others. Her vision of empowering women and children through education and community support has touched thousands of lives.",
-    image: "/vanitha-site/images/team/geeta-george.webp",
+    image: "/vanitha-site/images/leaders/geeta-george.webp",
   },
   {
     id: "priya-sarojini",
