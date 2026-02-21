@@ -96,7 +96,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-primary/10">
                     <Image
-                      src="/vanitha-site/images/lady1.webp"
+                      src="/vanitha-site/images/1.png"
                       alt="Vanitha community volunteers"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-accent/10">
                     <Image
-                      src="/vanitha-site/images/lady2.webp"
+                      src="/vanitha-site/images/2.png"
                       alt="Education programs"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
@@ -157,7 +157,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/impact-story.jpg"
+                    src="/vanitha-site/images/3.png"
                     alt="Vanitha community impact"
                     fill
                     className="object-cover"
@@ -170,6 +170,44 @@ export default function AboutPage() {
                 </div>
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* Photo Gallery */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="mb-10 text-center">
+              <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+                Our Community in Action
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+                Moments that capture the heart of Vanitha&apos;s work.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {[4, 5, 6, 7].map((n) => (
+                <div key={n} className="relative aspect-square overflow-hidden rounded-2xl">
+                  <Image
+                    src={`/vanitha-site/images/${n}.png`}
+                    alt={`Vanitha community photo ${n}`}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {[8].map((n) => (
+                <div key={n} className="relative col-span-2 aspect-[16/6] overflow-hidden rounded-2xl lg:col-span-4">
+                  <Image
+                    src={`/vanitha-site/images/${n}.png`}
+                    alt={`Vanitha community photo ${n}`}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
