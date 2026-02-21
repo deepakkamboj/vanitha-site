@@ -100,7 +100,7 @@ export const boardMembers: TeamMember[] = [
     name: "Priya Sarojini",
     role: "Secretary",
     bio: "Priya brings three decades of supply-chain management experience and is passionate about creating sustainable programs that create lasting change in communities. Her generous donations and efforts have touched many lives and institutions supporting women and children. She is passionate about mentoring and growing young people and enjoys sharing her knowledge and experience. Vanitha's activities provide great joy and meaning in her life.",
-    image: "/vanitha-site/images/team/priya-sarojini.webp",
+    image: "/vanitha-site/images/leaders/priya-sarojini.jpg",
   },
   {
     id: "usha-dawn",
