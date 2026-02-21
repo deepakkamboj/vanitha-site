@@ -54,7 +54,7 @@ export default function NotFound() {
         >
           <Link href="/">
             <Image
-              src="/vanitha-site/images/logo-old.webp"
+              src="/vanitha-site/images/logo.png"
               alt="Vanitha"
               width={180}
               height={70}

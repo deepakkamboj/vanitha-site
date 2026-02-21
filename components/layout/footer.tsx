@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
           <Image 
-            src="/vanitha-site/images/logo-old.webp" 
+            src="/vanitha-site/images/logo.png" 
             alt="Vanitha - Indian American Association of Women" 
             width={180}
             height={70}

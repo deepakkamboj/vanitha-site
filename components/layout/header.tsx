@@ -25,7 +25,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
           <Image
-            src="/vanitha-site/images/logo-old.webp"
+            src="/vanitha-site/images/logo.png"
             alt="Vanitha - Indian American Association of Women"
             width={160}
             height={60}
