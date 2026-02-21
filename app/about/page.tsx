@@ -26,12 +26,21 @@ const iconMap: Record<string, React.ElementType> = {
 function TeamMemberCard({ member }: { member: typeof boardMembers[0] }) {
   return (
     <Card className="overflow-hidden pt-0 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-      <div className="aspect-square bg-muted">
-        <div className="flex h-full w-full items-center justify-center bg-primary/5 transition-colors duration-300 hover:bg-primary/10">
-          <span className="font-serif text-4xl font-bold text-primary/30">
-            {member.name.split(" ").map((n) => n[0]).join("")}
-          </span>
-        </div>
+      <div className="relative aspect-square bg-muted">
+        {member.image ? (
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover object-top"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-primary/5">
+            <span className="font-serif text-4xl font-bold text-primary/30">
+              {member.name.split(" ").map((n) => n[0]).join("")}
+            </span>
+          </div>
+        )}
       </div>
       <CardHeader>
         <CardTitle className="font-serif text-lg">{member.name}</CardTitle>
