@@ -14,9 +14,9 @@ export function Footer() {
           <Image 
             src="/vanitha-site/images/logo.png" 
             alt="Vanitha - Indian American Association of Women" 
-            width={240}
-            height={100}
-            className="h-24 w-auto object-contain"
+            width={320}
+            height={128}
+            className="h-32 w-auto object-contain"
             priority
           />
             </Link>
