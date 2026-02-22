@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { pastPresidents } from "@/data/team";
+import { BASE_PATH } from "@/lib/base-path";
 
 export default function PastLeadershipPage() {
   return (
@@ -87,7 +88,7 @@ export default function PastLeadershipPage() {
                     <CardContent className="p-0">
                       <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
                         <Image
-                          src={president.image || "/placeholder.svg"}
+                          src={`${BASE_PATH}${president.image || "/placeholder.svg"}`}
                           alt={president.name}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -142,7 +143,7 @@ export default function PastLeadershipPage() {
               <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
                   <Image
-                    src="/vanitha-site/images/founders.png"
+                    src={`${BASE_PATH}/images/founders.png`}
                     alt="Vanitha founders"
                     fill
                     className="object-cover"

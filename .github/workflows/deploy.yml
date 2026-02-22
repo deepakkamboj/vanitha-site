@@ -37,6 +37,8 @@ jobs:
 
       - name: Build with Next.js
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /vanitha-site
 
       - name: List build output (debug)
         run: |

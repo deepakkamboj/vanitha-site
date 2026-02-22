@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import Image from "next/image";
 import Link from "next/link";
 import { GraduationCap, Baby, Monitor, CheckCircle2, ArrowRight, Heart } from "lucide-react";
@@ -55,7 +56,7 @@ export default function YouthPage() {
               <div className="relative hidden lg:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/2.png"
+                    src={`${BASE_PATH}/images/2.png`}
                     alt="Youth education programs"
                     fill
                     className="object-cover"
@@ -103,7 +104,7 @@ export default function YouthPage() {
                 </CardContent>
               </Card>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/5.png" alt="Digital inclusion programs" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/5.png`} alt="Digital inclusion programs" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -161,7 +162,7 @@ export default function YouthPage() {
             </div>
             <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/7.png" alt="Student support program" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/7.png`} alt="Student support program" fill className="object-cover" />
               </div>
               <div className="space-y-4 rounded-2xl bg-primary/5 p-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary">{educationUpdate.date}</p>

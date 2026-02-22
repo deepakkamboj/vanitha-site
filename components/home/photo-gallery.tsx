@@ -2,15 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const photos = [
-  { src: "/vanitha-site/images/1.png", alt: "Vanitha community volunteers", className: "col-span-1 row-span-2" },
-  { src: "/vanitha-site/images/2.png", alt: "Education programs", className: "col-span-1 row-span-1" },
-  { src: "/vanitha-site/images/3.png", alt: "Community impact", className: "col-span-1 row-span-1" },
-  { src: "/vanitha-site/images/4.png", alt: "Outreach programs", className: "col-span-2 row-span-1" },
-  { src: "/vanitha-site/images/5.png", alt: "Women empowerment", className: "col-span-1 row-span-1" },
-  { src: "/vanitha-site/images/6.png", alt: "Youth programs", className: "col-span-1 row-span-1" },
-];
+import { BASE_PATH } from "@/lib/base-path";
 
 export function PhotoGallery() {
   return (
@@ -37,7 +29,7 @@ export function PhotoGallery() {
           {/* Photo 1 — tall left */}
           <div className="relative col-span-1 row-span-2 overflow-hidden rounded-2xl md:row-span-2">
             <Image
-              src="/vanitha-site/images/1.png"
+              src={`${BASE_PATH}/images/1.png`}
               alt="Vanitha community volunteers"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -46,7 +38,7 @@ export function PhotoGallery() {
           {/* Photo 2 */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/vanitha-site/images/2.png"
+              src={`${BASE_PATH}/images/2.png`}
               alt="Education programs"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -55,7 +47,7 @@ export function PhotoGallery() {
           {/* Photo 3 */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/vanitha-site/images/3.png"
+              src={`${BASE_PATH}/images/3.png`}
               alt="Community impact"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -64,7 +56,7 @@ export function PhotoGallery() {
           {/* Photo 4 — tall right */}
           <div className="relative row-span-2 overflow-hidden rounded-2xl">
             <Image
-              src="/vanitha-site/images/4.png"
+              src={`${BASE_PATH}/images/4.png`}
               alt="Outreach programs"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -73,7 +65,7 @@ export function PhotoGallery() {
           {/* Photo 5 */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/vanitha-site/images/5.png"
+              src={`${BASE_PATH}/images/5.png`}
               alt="Women empowerment"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -82,7 +74,7 @@ export function PhotoGallery() {
           {/* Photo 6 */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/vanitha-site/images/6.png"
+              src={`${BASE_PATH}/images/6.png`}
               alt="Youth programs"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"

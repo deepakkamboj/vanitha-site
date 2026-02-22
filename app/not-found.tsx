@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Home, ArrowLeft, Search, Heart, Calendar, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { BASE_PATH } from "@/lib/base-path";
 
 const quickLinks = [
   { name: "Home", href: "/", icon: Home, description: "Return to homepage" },
@@ -54,7 +55,7 @@ export default function NotFound() {
         >
           <Link href="/">
             <Image
-              src="/vanitha-site/images/logo.png"
+              src={`${BASE_PATH}/images/logo.png`}
               alt="Vanitha"
               width={180}
               height={70}

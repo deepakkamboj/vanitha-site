@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Facebook, Instagram, Twitter } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import { BASE_PATH } from "@/lib/base-path";
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
           <Image 
-            src="/vanitha-site/images/logo.png" 
+            src={`${BASE_PATH}/images/logo.png`}
             alt="Vanitha - Indian American Association of Women" 
             width={320}
             height={128}

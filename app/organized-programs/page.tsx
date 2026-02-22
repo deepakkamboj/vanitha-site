@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -35,9 +36,9 @@ const categoryColors: Record<string, string> = {
 };
 
 const categoryPhotos: Record<string, string> = {
-  local: "/vanitha-site/images/8.png",
-  "education-us": "/vanitha-site/images/5.png",
-  india: "/vanitha-site/images/3.png",
+  local: `${BASE_PATH}/images/8.png`,
+  "education-us": `${BASE_PATH}/images/5.png`,
+  india: `${BASE_PATH}/images/3.png`,
 };
 
 export default function OrganizedProgramsPage() {
@@ -75,7 +76,7 @@ export default function OrganizedProgramsPage() {
               <div className="relative hidden lg:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/4.png"
+                    src={`${BASE_PATH}/images/4.png`}
                     alt="Organized programs overview"
                     fill
                     className="object-cover"

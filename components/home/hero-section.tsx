@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Heart, Play, Users, Globe, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
+import { BASE_PATH } from "@/lib/base-path";
 
 export function HeroSection() {
   return (
@@ -86,7 +87,7 @@ export function HeroSection() {
               {/* Main Image */}
               <div className="relative h-[600px] w-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 shadow-2xl">
                 <Image
-                  src="/vanitha-site/images/hero-community.jpg"
+                  src={`${BASE_PATH}/images/hero-community.jpg`}
                   alt="Vanitha community impact"
                   fill
                   className="object-cover"

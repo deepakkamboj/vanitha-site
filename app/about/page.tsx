@@ -1,5 +1,6 @@
 import React from "react"
 import type { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BookOpen, Heart, Shield, Users, Target, Eye, Sparkles, TrendingUp } from "lucide-react";
@@ -29,7 +30,7 @@ function TeamMemberCard({ member }: { member: typeof boardMembers[0] }) {
       <div className="relative aspect-square bg-muted">
         {member.image ? (
           <Image
-            src={member.image}
+            src={`${BASE_PATH}${member.image}`}
             alt={member.name}
             fill
             className="object-cover object-top"
@@ -105,7 +106,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-primary/10">
                     <Image
-                      src="/vanitha-site/images/1.png"
+                      src={`${BASE_PATH}/images/1.png`}
                       alt="Vanitha community volunteers"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
@@ -131,7 +132,7 @@ export default function AboutPage() {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-2xl bg-accent/10">
                     <Image
-                      src="/vanitha-site/images/2.png"
+                      src={`${BASE_PATH}/images/2.png`}
                       alt="Education programs"
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-110"
@@ -166,7 +167,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/3.png"
+                    src={`${BASE_PATH}/images/3.png`}
                     alt="Vanitha community impact"
                     fill
                     className="object-cover"
@@ -198,7 +199,7 @@ export default function AboutPage() {
               {[4, 5, 6, 7].map((n) => (
                 <div key={n} className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
-                    src={`/vanitha-site/images/${n}.png`}
+                    src={`${BASE_PATH}/images/${n}.png`}
                     alt={`Vanitha community photo ${n}`}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"
@@ -210,7 +211,7 @@ export default function AboutPage() {
               {[8].map((n) => (
                 <div key={n} className="relative col-span-2 aspect-[16/6] overflow-hidden rounded-2xl lg:col-span-4">
                   <Image
-                    src={`/vanitha-site/images/${n}.png`}
+                    src={`${BASE_PATH}/images/${n}.png`}
                     alt={`Vanitha community photo ${n}`}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"

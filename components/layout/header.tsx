@@ -8,6 +8,7 @@ import { Menu, X, HeartHandshake, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { BASE_PATH } from "@/lib/base-path";
 
 type NavChild = { name: string; href: string };
 type NavItem = { name: string; href: string; children?: NavChild[] };
@@ -25,7 +26,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-[1.02]">
           <Image
-            src="/vanitha-site/images/logo.png"
+            src={`${BASE_PATH}/images/logo.png`}
             alt="Vanitha - Indian American Association of Women"
             width={160}
             height={60}

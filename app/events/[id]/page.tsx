@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -97,7 +98,7 @@ export default async function EventDetailPage({
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
-          <div className="absolute inset-0 bg-[url('/vanitha-site/images/pattern.svg')] opacity-5" />
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `url('${BASE_PATH}/images/pattern.svg')` }} />
           <div className="container mx-auto px-4 py-8">
             {/* Breadcrumb */}
             <nav className="mb-6 flex items-center gap-2 text-sm text-muted-foreground">
@@ -119,7 +120,7 @@ export default async function EventDetailPage({
               {/* Event Image */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
                 <Image
-                  src={event.image || "/placeholder.svg"}
+                  src={`${BASE_PATH}${event.image || "/placeholder.svg"}`}
                   alt={event.title}
                   fill
                   className="object-cover"

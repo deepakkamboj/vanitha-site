@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import Image from "next/image";
 import Link from "next/link";
 import { Heart, Users, CheckCircle2, ArrowRight, Shield } from "lucide-react";
@@ -58,7 +59,7 @@ export default function WomenPage() {
               <div className="relative hidden lg:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/1.png"
+                    src={`${BASE_PATH}/images/1.png`}
                     alt="Women empowerment programs"
                     fill
                     className="object-cover"
@@ -100,7 +101,7 @@ export default function WomenPage() {
           <div className="container mx-auto px-4">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/4.png" alt="Women shelter support" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/4.png`} alt="Women shelter support" fill className="object-cover" />
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-primary">California</p>
@@ -154,7 +155,7 @@ export default function WomenPage() {
                 </div>
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/6.png" alt="Women mentoring programs" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/6.png`} alt="Women mentoring programs" fill className="object-cover" />
               </div>
             </div>
           </div>

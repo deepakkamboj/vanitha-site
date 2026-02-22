@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const nextConfig = {
-   basePath: '/vanitha-site',
-  assetPrefix: '/vanitha-site',
+  basePath,
+  assetPrefix: basePath,
   trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,

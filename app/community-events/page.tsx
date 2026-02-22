@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BASE_PATH } from "@/lib/base-path";
 import Image from "next/image";
 import Link from "next/link";
 import { Package, Users, CalendarDays, CheckCircle2, ArrowRight, Heart, MapPin } from "lucide-react";
@@ -53,7 +54,7 @@ export default function CommunityEventsPage() {
               <div className="relative hidden lg:block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image
-                    src="/vanitha-site/images/3.png"
+                    src={`${BASE_PATH}/images/3.png`}
                     alt="Community events and drives"
                     fill
                     className="object-cover"
@@ -70,7 +71,7 @@ export default function CommunityEventsPage() {
           <div className="container mx-auto px-4">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/8.png" alt="Essential needs collection" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/8.png`} alt="Essential needs collection" fill className="object-cover" />
               </div>
               <div>
                 <div className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
@@ -125,7 +126,7 @@ export default function CommunityEventsPage() {
                 </div>
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/vanitha-site/images/6.png" alt="Volunteer engagement" fill className="object-cover" />
+                <Image src={`${BASE_PATH}/images/6.png`} alt="Volunteer engagement" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -141,7 +142,7 @@ export default function CommunityEventsPage() {
             <Card className="border-border/50 shadow-md overflow-hidden">
               <div className="grid lg:grid-cols-2">
                 <div className="relative aspect-[4/3] lg:aspect-auto">
-                  <Image src="/vanitha-site/images/7.png" alt="Recent community event" fill className="object-cover" />
+                  <Image src={`${BASE_PATH}/images/7.png`} alt="Recent community event" fill className="object-cover" />
                 </div>
                 <div className="p-6 lg:p-8">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
