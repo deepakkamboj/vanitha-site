@@ -96,7 +96,7 @@ export default function DonatePage() {
               </div>
               <div className="shrink-0">
                 <a
-                  href="https://paypal.me/vanithaorg"
+                  href={siteConfig.payment.paypal}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Donate via PayPal"
@@ -126,7 +126,7 @@ export default function DonatePage() {
               <div className="flex-1">
                 <h2 className="font-semibold text-primary">Zelle</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  {siteConfig.contact.email}
+                  {siteConfig.payment.zelle}
                 </p>
               </div>
               <div className="shrink-0">

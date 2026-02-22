@@ -15,6 +15,10 @@ export const siteConfig = {
     instagram: "https://instagram.com/vanithaorg",
     twitter: "https://twitter.com/vanithaorg",
   },
+  payment: {
+    zelle: "charity.vanitha@gmail.com",
+    paypal: "https://www.paypal.com/paypalme/VanithaCA",
+  },
   navigation: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -29,7 +33,7 @@ export const siteConfig = {
         { name: "Organized Programs", href: "/organized-programs" },
       ],
     },
-    { name: "Donate", href: "/donate" },
+ 
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ],
