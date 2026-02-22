@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Heart, ChevronDown } from "lucide-react";
+import { Menu, X, HeartHandshake, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -93,7 +93,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Button asChild size="sm" className="bg-primary hover:bg-primary/90">
             <Link href="/donate">
-              <Heart className="mr-2 h-4 w-4" />
+              <HeartHandshake className="mr-2 h-4 w-4" />
               Donate
             </Link>
           </Button>
@@ -164,7 +164,7 @@ export function Header() {
             <div className="mt-4">
               <Button asChild className="w-full bg-primary hover:bg-primary/90">
                 <Link href="/donate">
-                  <Heart className="mr-2 h-4 w-4" />
+                  <HeartHandshake className="mr-2 h-4 w-4" />
                   Donate
                 </Link>
               </Button>
