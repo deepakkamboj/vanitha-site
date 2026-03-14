@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve existing files and directories directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Try appending .html for clean URLs (Next.js static export)
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Custom error pages
+ErrorDocument 404 /404.html
